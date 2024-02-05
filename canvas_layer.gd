@@ -10,10 +10,7 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("toggle_inventory"):
 		get_tree().paused = !get_tree().paused
-		var visibility = $PauseLabel.visible
-		$PauseLabel.visible = !visibility
-		print("this is gettting called at every pressure of I")
-		
+		$PauseLabel.visible = !$PauseLabel.visible
 
 func show_message(text):
 	$Message.text = text
